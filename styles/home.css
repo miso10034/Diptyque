@@ -1,0 +1,24 @@
+.hero {
+    width: 100vw;
+    height: 100vw;
+    background-image: url("../images/hero.png");
+    background-position: center;
+    background-repeat: repeat;
+}
+
+body.scroll-up video {
+    display:block;
+}
+
+  .logo__video {
+    width: 40%;
+    height: auto;
+    position: fixed;
+    top: 70px; /* Navbar의 높이에 맞게 조절 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display:none; /* 초기에는 숨김 */
+
+    
+}

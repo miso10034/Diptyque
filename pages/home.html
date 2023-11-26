@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/products.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+  </head>
+
+  <body>
+    <video class="logo__video" controls autoplay loop muted>
+      <source src="C:\Users\User\OneDrive\바탕 화면\딥디크\videos\logo-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <script>
+      var lastScrollTop = 0;
+
+      window.addEventListener("scroll", function(){
+          var st = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (st > lastScrollTop){
+              // 스크롤을 내리는 중
+              document.body.classList.remove("scroll-up");
+              document.body.classList.add("scroll-down");
+          } else {
+              // 스크롤을 올리는 중
+              document.body.classList.remove("scroll-down");
+              document.body.classList.add("scroll-up");
+          }
+
+          lastScrollTop = st <= 0 ? 0 : st;
+      });
+
+      // 비디오를 클릭한 경우 재생 시작
+      var video = document.querySelector('.logo__video');
+      var playButton = document.querySelector('.play-button');
+
+      document.querySelector('.logo__video').addEventListener('click', function() {
+          video.play();
+      });
+    </script>
+    <div class="hero"></div>
+    <div class="container">
+      <!-- 베스트셀러 -->
+      <h2 class="page-title page-title--left">
+        <a href="products-chart.html">
+          베스트셀러
+          <span class="page-title__more">더보기</span>
+        </a>
+      </h2>
+      <ol class="products">
+        <li class="product">
+          <a href="product-detail.html" class="product__link">
+            <span class="product__badge">1</span>
+            <img
+              src="../images/product1.png"
+              alt="DO SON"
+              class="product__poster"
+            />
+            <h3 class="product__title">DO SON</h3>
+            <div class="product__info">
+              <span class="product__date">Eau de parfum</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 96 96"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_101_537)">
+                  <path
+                    d="M48 85.4L42.2 80.12C21.6 61.44 8 49.12 8 34C8 21.68 17.68 12 30 12C36.96 12 43.64 15.24 48 20.36C52.36 15.24 59.04 12 66 12C78.32 12 88 21.68 88 34C88 49.12 74.4 61.44 53.8 80.16L48 85.4Z"
+                    fill="#FF0000"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_101_537">
+                    <rect width="96" height="96" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li class="product">
+          <a href="product-detail.html" class="product__link">
+            <span class="product__badge">2</span>
+            <img
+              src="../images/product2.png"
+              alt="ORPHÉON"
+              class="product__poster"
+            />
+            <h3 class="product__title">ORPHÉON</h3>
+            <div class="product__info">
+              <span class="product__date">Eau de parfum</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 96 96"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_101_537)">
+                  <path
+                    d="M48 85.4L42.2 80.12C21.6 61.44 8 49.12 8 34C8 21.68 17.68 12 30 12C36.96 12 43.64 15.24 48 20.36C52.36 15.24 59.04 12 66 12C78.32 12 88 21.68 88 34C88 49.12 74.4 61.44 53.8 80.16L48 85.4Z"
+                    fill="#FF0000"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_101_537">
+                    <rect width="96" height="96" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li class="product">
+          <a href="product-detail.html" class="product__link">
+            <span class="product__badge">3</span>
+            <img
+              src="../images/product3.png"
+              alt="PHILOSYKOS"
+              class="product__poster"
+            />
+            <h3 class="product__title">PHILOSYKOS</h3>
+            <div class="product__info">
+              <span class="product__date">Eau de parfum</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 96 96"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_101_537)">
+                  <path
+                    d="M48 85.4L42.2 80.12C21.6 61.44 8 49.12 8 34C8 21.68 17.68 12 30 12C36.96 12 43.64 15.24 48 20.36C52.36 15.24 59.04 12 66 12C78.32 12 88 21.68 88 34C88 49.12 74.4 61.44 53.8 80.16L48 85.4Z"
+                    fill="#FF0000"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_101_537">
+                    <rect width="96" height="96" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </a>
+        </li>
+      </ol>
+      <!-- 판매중인상품 전부 -->
+      <h2 class="page-title page-title--left">
+        <a href="playing-products.html">
+          판매중인상품<span class="page-title__more">더보기</span>
+        </a>
+      </h2>
+      <ol class="products">
+        <li class="product">
+            <a href="product-detail.html" class="product__link">
+            
+              <img
+                src="../images/product1.png"
+                alt="DO SON"
+                class="product__poster"
+              />
+              <h3 class="product__title">DO SON</h3>
+              <div class="product__info">
+                <span class="product__date">Eau de parfum</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 96 96"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_101_537)">
+                    <path
+                      d="M48 85.4L42.2 80.12C21.6 61.44 8 49.12 8 34C8 21.68 17.68 12 30 12C36.96 12 43.64 15.24 48 20.36C52.36 15.24 59.04 12 66 12C78.32 12 88 21.68 88 34C88 49.12 74.4 61.44 53.8 80.16L48 85.4Z"
+                      fill="#FF0000"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_101_537">
+                      <rect width="96" height="96" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </li>
+          <li class="product">
+            <a href="product-detail.html" class="product__link">
+             
+              <img
+                src="../images/product2.png"
+                alt="ORPHÉON"
+                class="product__poster"
+              />
+              <h3 class="product__title">ORPHÉON</h3>
+              <div class="product__info">
+                <span class="product__date">Eau de parfum</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 96 96"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_101_537)">
+                    <path
+                      d="M48 85.4L42.2 80.12C21.6 61.44 8 49.12 8 34C8 21.68 17.68 12 30 12C36.96 12 43.64 15.24 48 20.36C52.36 15.24 59.04 12 66 12C78.32 12 88 21.68 88 34C88 49.12 74.4 61.44 53.8 80.16L48 85.4Z"
+                      fill="#FF0000"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_101_537">
+                      <rect width="96" height="96" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </li>
+          <li class="product">
+            <a href="product-detail.html" class="product__link">
+      
+              <img
+                src="../images/product3.png"
+                alt="PHILOSYKOS"
+                class="product__poster"
+              />
+              <h3 class="product__title">PHILOSYKOS</h3>
+              <div class="product__info">
+                <span class="product__date">Eau de parfum</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 96 96"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_101_537)">
+                    <path
+                      d="M48 85.4L42.2 80.12C21.6 61.44 8 49.12 8 34C8 21.68 17.68 12 30 12C36.96 12 43.64 15.24 48 20.36C52.36 15.24 59.04 12 66 12C78.32 12 88 21.68 88 34C88 49.12 74.4 61.44 53.8 80.16L48 85.4Z"
+                      fill="#FF0000"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_101_537">
+                      <rect width="96" height="96" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </li>
+          <li class="product">
+            <a href="product-detail.html" class="product__link">
+            
+              <img
+                src="../images/product4.png"
+                alt="TAM DAO"
+                class="product__poster"
+              />
+              <h3 class="product__title">TAM DAO</h3>
+              <div class="product__info">
+                <span class="product__date">Eau de parfum</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 96 96"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_101_536)">
+                    <path
+                      d="M44.8927 77.1621L44.887 77.1569C34.5065 67.7439 26.2154 60.2153 20.4712 53.1925C14.773 46.2259 12 40.2461 12 34C12 23.8891 19.8891 16 30 16C35.7489 16 41.329 18.6957 44.9546 22.9534L48 26.5296L51.0454 22.9534C54.671 18.6957 60.2511 16 66 16C76.1109 16 84 23.8891 84 34C84 40.2461 81.227 46.2261 75.5279 53.1986C69.7836 60.2263 61.4936 67.7637 51.1142 77.1958C51.1128 77.1971 51.1113 77.1984 51.1099 77.1997L48.0102 80.0001L44.8927 77.1621Z"
+                      stroke="black"
+                      stroke-opacity="0.2"
+                      stroke-width="8"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_101_536">
+                      <rect width="96" height="96" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </li>
+          <li class="product">
+            <a href="product-detail.html" class="product__link">
+             
+              <img
+                src="../images/product5.png"
+                alt="OYÉDO"
+                class="product__poster"
+              />
+              <h3 class="product__title">OYÉDO</h3>
+              <div class="product__info">
+                <span class="product__date">Eau de Toilette</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 96 96"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_101_536)">
+                    <path
+                      d="M44.8927 77.1621L44.887 77.1569C34.5065 67.7439 26.2154 60.2153 20.4712 53.1925C14.773 46.2259 12 40.2461 12 34C12 23.8891 19.8891 16 30 16C35.7489 16 41.329 18.6957 44.9546 22.9534L48 26.5296L51.0454 22.9534C54.671 18.6957 60.2511 16 66 16C76.1109 16 84 23.8891 84 34C84 40.2461 81.227 46.2261 75.5279 53.1986C69.7836 60.2263 61.4936 67.7637 51.1142 77.1958C51.1128 77.1971 51.1113 77.1984 51.1099 77.1997L48.0102 80.0001L44.8927 77.1621Z"
+                      stroke="black"
+                      stroke-opacity="0.2"
+                      stroke-width="8"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_101_536">
+                      <rect width="96" height="96" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </li>
+          
+          <li class="product">
+              <a href="product-detail.html" class="product__link">
+                <img
+                  src="../images/product7.png"
+                  alt="EAU CAPITALE"
+                  class="product__poster"
+                />
+                <h3 class="product__title">EAU CAPITALE</h3>
+                <div class="product__info">
+                  <span class="product__date">Eau de parfum</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 96 96"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_101_536)">
+                      <path
+                        d="M44.8927 77.1621L44.887 77.1569C34.5065 67.7439 26.2154 60.2153 20.4712 53.1925C14.773 46.2259 12 40.2461 12 34C12 23.8891 19.8891 16 30 16C35.7489 16 41.329 18.6957 44.9546 22.9534L48 26.5296L51.0454 22.9534C54.671 18.6957 60.2511 16 66 16C76.1109 16 84 23.8891 84 34C84 40.2461 81.227 46.2261 75.5279 53.1986C69.7836 60.2263 61.4936 67.7637 51.1142 77.1958C51.1128 77.1971 51.1113 77.1984 51.1099 77.1997L48.0102 80.0001L44.8927 77.1621Z"
+                        stroke="black"
+                        stroke-opacity="0.2"
+                        stroke-width="8"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_101_536">
+                        <rect width="96" height="96" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            
+            <li class="product">
+              <a href="product-detail.html" class="product__link">
+                <img
+                  src="../images/product9.png"
+                  alt="EAU DE MINTHÉ"
+                  class="product__poster"
+                />
+                <h3 class="product__title">EAU DE MINTHÉ</h3>
+                <div class="product__info">
+                  <span class="product__date">Eau de parfum</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 96 96"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_101_536)">
+                      <path
+                        d="M44.8927 77.1621L44.887 77.1569C34.5065 67.7439 26.2154 60.2153 20.4712 53.1925C14.773 46.2259 12 40.2461 12 34C12 23.8891 19.8891 16 30 16C35.7489 16 41.329 18.6957 44.9546 22.9534L48 26.5296L51.0454 22.9534C54.671 18.6957 60.2511 16 66 16C76.1109 16 84 23.8891 84 34C84 40.2461 81.227 46.2261 75.5279 53.1986C69.7836 60.2263 61.4936 67.7637 51.1142 77.1958C51.1128 77.1971 51.1113 77.1984 51.1099 77.1997L48.0102 80.0001L44.8927 77.1621Z"
+                        stroke="black"
+                        stroke-opacity="0.2"
+                        stroke-width="8"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_101_536">
+                        <rect width="96" height="96" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </a>
+            </li>
+      </ol>
+      <!-- 출시예정상품 -->
+      <h2 class="page-title page-title--left">
+        <a href="upcoming-products.html">
+          출시예정상품
+          <span class="page-title__more">더보기</span>
+        </a>
+      </h2>
+      <ol class="products">
+        <li class="product">
+            <a href="product-detail.html" class="product__link">
+                <span class="product__badge">D-1</span>
+              <img
+                src="../images/product6.png"
+                alt="BENJOIN BOHÈME"
+                class="product__poster"
+              />
+              <h3 class="product__title">BENJOIN BOHÈME</h3>
+              <div class="product__info">
+                <span class="product__date">Eau de parfum</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 96 96"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_101_536)">
+                    <path
+                      d="M44.8927 77.1621L44.887 77.1569C34.5065 67.7439 26.2154 60.2153 20.4712 53.1925C14.773 46.2259 12 40.2461 12 34C12 23.8891 19.8891 16 30 16C35.7489 16 41.329 18.6957 44.9546 22.9534L48 26.5296L51.0454 22.9534C54.671 18.6957 60.2511 16 66 16C76.1109 16 84 23.8891 84 34C84 40.2461 81.227 46.2261 75.5279 53.1986C69.7836 60.2263 61.4936 67.7637 51.1142 77.1958C51.1128 77.1971 51.1113 77.1984 51.1099 77.1997L48.0102 80.0001L44.8927 77.1621Z"
+                      stroke="black"
+                      stroke-opacity="0.2"
+                      stroke-width="8"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_101_536">
+                      <rect width="96" height="96" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </li>
+        <li class="product">
+            <a href="product-detail.html" class="product__link">
+                <span class="product__badge">D-3</span>
+              <img
+                src="../images/product8.png"
+                alt="L'EAU TROIS"
+                class="product__poster"
+              />
+              <h3 class="product__title">L'EAU TROIS</h3>
+              <div class="product__info">
+                <span class="product__date">Eau de Toilette</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 96 96"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_101_536)">
+                    <path
+                      d="M44.8927 77.1621L44.887 77.1569C34.5065 67.7439 26.2154 60.2153 20.4712 53.1925C14.773 46.2259 12 40.2461 12 34C12 23.8891 19.8891 16 30 16C35.7489 16 41.329 18.6957 44.9546 22.9534L48 26.5296L51.0454 22.9534C54.671 18.6957 60.2511 16 66 16C76.1109 16 84 23.8891 84 34C84 40.2461 81.227 46.2261 75.5279 53.1986C69.7836 60.2263 61.4936 67.7637 51.1142 77.1958C51.1128 77.1971 51.1113 77.1984 51.1099 77.1997L48.0102 80.0001L44.8927 77.1621Z"
+                      stroke="black"
+                      stroke-opacity="0.2"
+                      stroke-width="8"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_101_536">
+                      <rect width="96" height="96" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </li>
+      </ol>
+    </div>
+  </body>
+</html>

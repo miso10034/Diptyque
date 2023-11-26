@@ -1,0 +1,49 @@
+.product-detail {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 458px);
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    grid-template-areas:
+      "poster info"
+      "poster synopsis"
+      "poster action";
+  }
+  
+  .product-detail__poster {
+    grid-area: poster;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .product-detail__info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .product-detail__title {
+    font-size: 1.5rem;
+  }
+  
+  .product-detail__synopsis {
+    grid-area: synopsis;
+  }
+  
+  .product-detail__action {
+    grid-area: action;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .product-action__title {
+    color: #aaa;
+  }
